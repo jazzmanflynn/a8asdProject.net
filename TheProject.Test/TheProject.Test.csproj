@@ -61,7 +61,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DummyFeature.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Login.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Login.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\LoginSteps.cs" />
     <Compile Include="Steps\StepDefinition1.cs" />
     <Compile Include="Unit\DummyTests.cs" />
   </ItemGroup>
@@ -71,9 +77,18 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DummyFeature.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\Login.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Login.feature.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\TheProject\TheProject.csproj">
+      <Project>{e14d0056-fb16-43f6-a6a1-e00198cb4ee8}</Project>
+      <Name>TheProject</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
