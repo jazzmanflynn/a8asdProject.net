@@ -11,12 +11,6 @@ namespace TheProject.Test.Steps
             ScenarioContext.Current.Pending();
         }
 
-        [Given(@"the (.*) is in the catalog")]
-        public void GivenTheIsInTheCatalog(string p0)
-        {
-            ScenarioContext.Current.Pending();
-        }
-
         [Given(@"and the (.*) is not borrowed")]
         public void GivenAndTheIsNotBorrowed(string p0)
         {
