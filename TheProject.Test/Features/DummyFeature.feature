@@ -1,7 +1,7 @@
 ﻿Feature: DummyFeature
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+	In order to borrow a book
+	As a member
+	I want to see a borrow confirmation
 
 @mytag
 Scenario: Add two numbers
