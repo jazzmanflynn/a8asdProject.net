@@ -11,7 +11,7 @@ namespace TheProject.Test.Steps
         private Library library = new Library();
 
         [Given(@"the book ""(.*)"" is in the catalog")]
-        public void GivenTheBookIsInTheCatalog(string p0)
+        public void GivenTheSearchedBookIsInTheCatalog(string p0)
         {
             library.AddBook(p0);
         }
