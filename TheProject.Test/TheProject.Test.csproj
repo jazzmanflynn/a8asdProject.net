@@ -72,7 +72,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SearchBook.feature</DependentUpon>
     </Compile>
-    <Compile Include="Steps\StepDefinition1.cs" />
     <Compile Include="Steps\StepDefinitionSearch.cs" />
     <Compile Include="Steps\BorrowBookDefinition.cs" />
     <Compile Include="Unit\DummyTests.cs" />
