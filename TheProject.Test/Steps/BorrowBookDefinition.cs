@@ -5,12 +5,6 @@ namespace TheProject.Test.Steps
     [Binding]
     public sealed class BorrowBookDefinition
     {
-        [Given(@"I am a (.*)")]
-        public void GivenIAmA(string p0)
-        {
-            ScenarioContext.Current.Pending();
-        }
-
         [Given(@"and the (.*) is not borrowed")]
         public void GivenAndTheIsNotBorrowed(string p0)
         {
