@@ -56,6 +56,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Features\BorrowBook.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BorrowBook.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\DummyFeature.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -69,10 +74,15 @@
     </Compile>
     <Compile Include="Steps\StepDefinition1.cs" />
     <Compile Include="Steps\StepDefinitionSearch.cs" />
+    <Compile Include="Steps\BorrowBookDefinition.cs" />
     <Compile Include="Unit\DummyTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Features\BorrowBook.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BorrowBook.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\DummyFeature.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DummyFeature.feature.cs</LastGenOutput>
