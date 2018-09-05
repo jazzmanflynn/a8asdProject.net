@@ -5,7 +5,7 @@
 
 @mytag
 Scenario: Borrow a book
-	Given I am a <member> 
+	Given I am a Member 
 	And the <book> is in the catalog 
 	And and the <book> is not borrowed
 	When I choose to borrow the book

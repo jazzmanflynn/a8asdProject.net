@@ -81,7 +81,7 @@ namespace TheProject.Test.Features
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 8
- testRunner.Given("I am a <member>", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am a Member", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
  testRunner.And("the <book> is in the catalog", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10

@@ -2,12 +2,15 @@
 
 namespace TheProject.Test.Steps
 {
+    using TheProject.Model;
+
     [Binding]
     public sealed class BorrowBookDefinition
     {
         [Given(@"I am a (.*)")]
         public void GivenIAmA(string p0)
         {
+            Member member = new Member();
             ScenarioContext.Current.Pending();
         }
 
