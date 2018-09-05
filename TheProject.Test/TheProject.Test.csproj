@@ -80,7 +80,6 @@
     <Compile Include="Steps\StepDefinitionSearch.cs" />
     <Compile Include="Steps\BorrowBookDefinition.cs" />
     <Compile Include="Steps\LoginSteps.cs" />
-    <Compile Include="Steps\StepDefinition1.cs" />
     <Compile Include="Unit\DummyTests.cs" />
   </ItemGroup>
   <ItemGroup>
