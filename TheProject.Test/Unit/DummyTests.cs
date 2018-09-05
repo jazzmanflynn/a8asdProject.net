@@ -8,6 +8,7 @@ namespace TheProject.Test.Unit
         [Test]
         public void ThisIsJustAPlaceholder()
         {
+            Assert.IsTrue(true, "this should be true!");
         }
     }
 }
