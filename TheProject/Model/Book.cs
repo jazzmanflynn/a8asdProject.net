@@ -9,5 +9,6 @@ namespace TheProject.Model
     public class Book
     {
         public string Name { get; set; }
+        public bool IsBorrowed { get; set; }
     }
 }

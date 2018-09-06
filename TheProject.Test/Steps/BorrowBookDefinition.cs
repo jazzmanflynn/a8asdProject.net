@@ -2,34 +2,44 @@
 
 namespace TheProject.Test.Steps
 {
+    using NUnit.Framework;
     using TheProject.Model;
 
     [Binding]
     public sealed class BorrowBookDefinition
     {
-        [Given(@"I am a (.*)")]
-        public void GivenIAmA(string p0)
+        private Member member ; 
+        private Book book;
+        private Catalog catalog;
+
+        public BorrowBookDefinition()
         {
-            Member member = new Member();
-            ScenarioContext.Current.Pending();
+            catalog = new Catalog();
+            member = new Member();
         }
 
-        [Given(@"and the (.*) is not borrowed")]
-        public void GivenAndTheIsNotBorrowed(string p0)
+        [Given(@"(.*) is a member")]
+        public void GivenIAmAMember(string name)
         {
-            ScenarioContext.Current.Pending();
+            member.Name = name;
         }
 
-        [When(@"I choose to borrow the book")]
-        public void WhenIChooseToBorrowTheBook()
+        [Given(@"(.*) is in the catalog")]
+        public void GivenTheSelectedBookIsInCatalog(string bookTitle)
         {
-            ScenarioContext.Current.Pending();
+            catalog.AddBook(new Book { Name = bookTitle });
         }
 
-        [Then(@"I get a borrow confirmation")]
-        public void ThenIGetABorrowConfirmation()
+        [When(@"(.*) borrows (.*)")]
+        public void WhenIChooseToBorrowTheBook(string memberName, string bookTitle)
         {
-            ScenarioContext.Current.Pending();
+            catalog.LendBook(bookTitle);
+        }
+
+        [Then(@"(.*) is borrowed")]
+        public void ThenIGetABorrowConfirmation(string bookTitle)
+        {
+            Assert.That(catalog.GetBook(bookTitle).IsBorrowed);
         }
     }
 }
