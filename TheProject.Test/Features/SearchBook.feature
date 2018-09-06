@@ -5,9 +5,9 @@
 
 @mytag
 Scenario Outline: Search for one book
-	Given the book "<name>" is in the catalog
-	When I search for "<name>"
-	Then the book "<name>" is shown on the screen
+	Given the book <name> is in the catalog
+	When I search for <name>
+	Then the book <name> is shown on the screen
 
 	Examples: 
 	| name                 |
