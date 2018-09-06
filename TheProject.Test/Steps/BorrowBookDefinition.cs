@@ -26,11 +26,11 @@ namespace TheProject.Test.Steps
             member.Username = name;
         }
 
-        //[Given(@"(.*) is in the catalog")]
-        //public void GivenTheSelectedBookIsInCatalog(string bookTitle)
-        //{
-        //    library.AddBook(bookTitle );
-        //}
+        [Given(@"(.*) is in the library catalog")]
+        public void GivenTheSelectedBookIsInCatalog(string bookTitle)
+        {
+            library.AddBook(bookTitle);
+        }
 
         [When(@"(.*) borrows (.*)")]
         public void WhenIChooseToBorrowTheBook(string memberName, string bookTitle)

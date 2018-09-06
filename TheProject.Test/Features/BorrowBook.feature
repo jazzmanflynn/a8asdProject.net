@@ -6,6 +6,6 @@
 @mytag
 Scenario: Borrow a book
 	Given Mikki is a member 
-	And available book is in the catalog 
+	And available book is in the library catalog 
 	When Mikki borrows available book
 	Then available book is borrowed
