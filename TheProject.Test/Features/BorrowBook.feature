@@ -9,3 +9,10 @@ Scenario: Borrow a book
 	And available book is in the library catalog 
 	When Mikki borrows available book
 	Then available book is borrowed
+
+@mytag
+Scenario: Borrow a not available book
+	Given Mikki is a member 
+	And not available book is in the library catalog 
+	When Mikki borrows not available book
+	Then Mikki borrowed book list not contains not available book

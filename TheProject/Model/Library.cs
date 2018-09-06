@@ -42,5 +42,10 @@ namespace TheProject.Model
             member.BorrowBook(book);
             return true;
         }
+
+        public void AddUser(string name)
+        {
+            MemberRegister.Add(new Member {Username = name});
+        }
     }
 }

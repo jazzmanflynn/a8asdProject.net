@@ -20,5 +20,15 @@ namespace TheProject.Model
         {
             return _members.FirstOrDefault(member => member.Username.Equals(user) && member.Password.Equals(password));
         }
+
+        public Member Find(string memberName)
+        {
+            return _members.FirstOrDefault(member => member.Username.Equals(memberName));
+        }
+
+        public void Add(Member member)
+        {
+            _members.Add(member);
+        }
     }
 }

@@ -2,6 +2,7 @@
 
 namespace TheProject.Test.Steps
 {
+    using System.Collections.Generic;
     using NUnit.Framework;
     using TheProject.Model;
 
@@ -24,6 +25,7 @@ namespace TheProject.Test.Steps
         public void GivenIAmAMember(string name)
         {
             member.Username = name;
+            library.AddUser(name);
         }
 
         [Given(@"(.*) is in the library catalog")]
@@ -43,6 +45,13 @@ namespace TheProject.Test.Steps
         public void ThenIGetABorrowConfirmation(string bookTitle)
         {
             Assert.That(library.Search(bookTitle).IsBorrowed);
+        }
+
+        [Then(@"(.*) borrowed book list not contains (.*)")]
+        public void ThenMikkisBorrowedBookNotContainsNotAvailableBook(string memberName, string bookTitle)
+        {
+            bool hasBook = library.MemberRegister.Find(memberName).GetBorrowedBooks().Contains(bookTitle);
+            Assert.IsFalse(hasBook);
         }
     }
 }

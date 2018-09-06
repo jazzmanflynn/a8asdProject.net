@@ -18,5 +18,10 @@ namespace TheProject.Model
         {
             _borrowedBooks.Add(book.Name);
         }
+
+        public IList<string> GetBorrowedBooks()
+        {
+            return _borrowedBooks;
+        }
     }
 }
