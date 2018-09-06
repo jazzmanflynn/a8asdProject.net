@@ -21,7 +21,7 @@ namespace TheProject.Test.Steps
         public void WhenISearchFor(string p0)
         {
             Book book = library.Search(p0);
-            library.Screen = book?.Name;
+            library.Screen = book == null ? String.Empty : book.Name;
         }
         
         [Then(@"the book (.*) is shown on the screen")]
@@ -39,7 +39,7 @@ namespace TheProject.Test.Steps
         [Then(@"the error message ""(.*)"" is shown on the screen")]
         public void ThenTheErrorMessageIsShownOnTheScreen(string p0)
         {
-            Assert.AreEqual($"{library.SearchedBook.Name} can not be found!", p0);
+            Assert.AreEqual(library.SearchedBook.Name + " can not be found!", p0);
         }
 
 
