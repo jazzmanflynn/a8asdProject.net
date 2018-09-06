@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using TheProject.Model;
 
 namespace TheProject.Test.Unit
 {
@@ -6,9 +7,19 @@ namespace TheProject.Test.Unit
     public class DummyTests
     {
         [Test]
-        public void ThisIsJustAPlaceholder()
+
+        public void LoginFailureTest()
         {
-            Assert.IsTrue(true, "this should be true!");
+            string nonMemberUserName = "nonmemberUsername";
+            string nonMemberUserPassword = "nonmemberPassword";
+
+            var library = new Library
+            {
+                CurrentUser = new Member { Username = nonMemberUserName, Password = nonMemberUserPassword }
+            };
+            library.Login();
+
+            Assert.IsFalse(library.IsMemberLoggedIn);
         }
     }
 }
