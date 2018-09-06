@@ -4,7 +4,12 @@
 	I want to be told the sum of two numbers
 
 @mytag
-Scenario: Search for one book
-	Given the book "Bible" is in the catalog
-	When I search for "Bible"
-	Then the book "Bible" is shown on the screen
+Scenario Outline: Search for one book
+	Given the book "<name>" is in the catalog
+	When I search for "<name>"
+	Then the book "<name>" is shown on the screen
+
+	Examples: 
+	| name                 |
+	| Bible                |
+	| Lustiges Taschenbuch |
