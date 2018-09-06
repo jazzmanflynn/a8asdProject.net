@@ -66,6 +66,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DummyFeature.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Login.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Login.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Features\SearchBook.feature.cs">
       <AutoGen>True</AutoGen>
@@ -74,6 +79,7 @@
     </Compile>
     <Compile Include="Steps\StepDefinitionSearch.cs" />
     <Compile Include="Steps\BorrowBookDefinition.cs" />
+    <Compile Include="Steps\LoginSteps.cs" />
     <Compile Include="Unit\DummyTests.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +91,10 @@
     <None Include="Features\DummyFeature.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>DummyFeature.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Login.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Login.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="Features\SearchBook.feature">

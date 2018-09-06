@@ -21,7 +21,7 @@ namespace TheProject.Test.Steps
         [Given(@"(.*) is a member")]
         public void GivenIAmAMember(string name)
         {
-            member.Name = name;
+            member.Username = name;
         }
 
         [Given(@"(.*) is in the catalog")]

@@ -20,5 +20,19 @@ namespace TheProject.Model
         {
             return books.FirstOrDefault(b => b.Name == p0);
         }
+        public Library()
+        {
+            MemberRegister = new MemberRegister();
+        }
+
+        public bool IsMemberLoggedIn { get; set; }
+        public MemberRegister MemberRegister { get; set; }
+        public Member CurrentUser { get; set; }
+
+        public void Login()
+        {
+            var member = MemberRegister.Find(CurrentUser.Username, CurrentUser.Password);
+            IsMemberLoggedIn = member != null;
+        }
     }
 }
