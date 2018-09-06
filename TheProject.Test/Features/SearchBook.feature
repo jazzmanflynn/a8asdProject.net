@@ -13,3 +13,17 @@ Scenario Outline: Search for one book
 	| name                 |
 	| Bible                |
 	| Lustiges Taschenbuch |
+
+@mytag
+Scenario Outline: Search for one book that is not in the catalog
+	Given the book <bookName> is not in the catalog
+	When I search for <bookName>
+	Then the error message <errorMessage> is shown on the screen
+
+	Examples: 
+	| bookName        | errorMessage                     |
+	| "War and Peace" | ""War and Peace" can not be found!" |
+	| "Hamlet"        | ""Hamlet" can not be found!"        |
+	| "Moby Dick"     | ""Moby Dick" can not be found!"     |
+	| ""              | """ can not be found!"               |
+
