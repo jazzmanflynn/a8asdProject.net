@@ -20,12 +20,6 @@ namespace TheProject.Model
             return _listOfBooks.Any(b => b.Name == title);
         }
 
-        public void LendBook(string bookTitle)
-        {
-            _listOfBooks.First(b => b.Name == bookTitle).IsBorrowed = true;
-
-        }
-
         public Book GetBook(string bookTitle)
         {
             return _listOfBooks.First(b => b.Name == bookTitle);

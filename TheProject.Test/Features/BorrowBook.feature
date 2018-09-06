@@ -7,5 +7,5 @@
 Scenario: Borrow a book
 	Given Mikki is a member 
 	And available book is in the catalog 
-	When Mikki borrows avaiable book
+	When Mikki borrows available book
 	Then available book is borrowed

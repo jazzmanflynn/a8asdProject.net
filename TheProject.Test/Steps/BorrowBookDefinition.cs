@@ -8,13 +8,15 @@ namespace TheProject.Test.Steps
     [Binding]
     public sealed class BorrowBookDefinition
     {
-        private Member member ; 
+        private Member member ;
         private Book book;
-        private Catalog catalog;
+        private Library library;
 
         public BorrowBookDefinition()
         {
-            catalog = new Catalog();
+            library = new Library();
+            
+            
             member = new Member();
         }
 
@@ -24,22 +26,23 @@ namespace TheProject.Test.Steps
             member.Username = name;
         }
 
-        [Given(@"(.*) is in the catalog")]
-        public void GivenTheSelectedBookIsInCatalog(string bookTitle)
-        {
-            catalog.AddBook(new Book { Name = bookTitle });
-        }
+        //[Given(@"(.*) is in the catalog")]
+        //public void GivenTheSelectedBookIsInCatalog(string bookTitle)
+        //{
+        //    library.AddBook(bookTitle );
+        //}
 
         [When(@"(.*) borrows (.*)")]
         public void WhenIChooseToBorrowTheBook(string memberName, string bookTitle)
         {
-            catalog.LendBook(bookTitle);
+
+            library.LendBook(library.Search(bookTitle), member);
         }
 
         [Then(@"(.*) is borrowed")]
         public void ThenIGetABorrowConfirmation(string bookTitle)
         {
-            Assert.That(catalog.GetBook(bookTitle).IsBorrowed);
+            Assert.That(library.Search(bookTitle).IsBorrowed);
         }
     }
 }

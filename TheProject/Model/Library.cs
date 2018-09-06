@@ -8,17 +8,18 @@ namespace TheProject.Model
 {
     public class Library
     {
-        private List<Book> books = new List<Book>();
+        private Catalog catalog = new Catalog();
+
         public string Screen { get; set; }
 
         public void AddBook(string p0)
         {
-            books.Add(new Book { Name = p0});
+            catalog.AddBook(new Book { Name = p0});
         }
 
-        public Book Search(string p0)
+        public Book Search(string bookTitle)
         {
-            return books.FirstOrDefault(b => b.Name == p0);
+            return catalog.GetBook(bookTitle);
         }
         public Library()
         {
@@ -33,6 +34,13 @@ namespace TheProject.Model
         {
             var member = MemberRegister.Find(CurrentUser.Username, CurrentUser.Password);
             IsMemberLoggedIn = member != null;
+        }
+
+        public bool LendBook(Book book, Member member)
+        {
+            book.IsBorrowed = true;
+            member.BorrowBook(book);
+            return true;
         }
     }
 }

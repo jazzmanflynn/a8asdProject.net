@@ -85,7 +85,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 9
  testRunner.And("available book is in the catalog", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
- testRunner.When("Mikki borrows avaiable book", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("Mikki borrows available book", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
  testRunner.Then("available book is borrowed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
