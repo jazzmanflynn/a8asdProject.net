@@ -22,7 +22,7 @@ namespace TheProject.Model
 
         public Book GetBook(string bookTitle)
         {
-            return _listOfBooks.First(b => b.Name == bookTitle);
+            return _listOfBooks.FirstOrDefault(b => b.Name == bookTitle);
         }
     }
 }

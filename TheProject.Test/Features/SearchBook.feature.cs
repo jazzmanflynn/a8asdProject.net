@@ -88,11 +88,40 @@ namespace TheProject.Test.Features
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 8
- testRunner.Given(string.Format("the book \"{0}\" is in the catalog", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("the book {0} is in the catalog", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.When(string.Format("I search for \"{0}\"", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I search for {0}", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
- testRunner.Then(string.Format("the book \"{0}\" is shown on the screen", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("the book {0} is shown on the screen", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Search for one book that is not in the catalog")]
+        [NUnit.Framework.CategoryAttribute("mytag")]
+        [NUnit.Framework.TestCaseAttribute("\"War and Peace\"", "\"\"War and Peace\" can not be found!\"", null)]
+        [NUnit.Framework.TestCaseAttribute("\"Hamlet\"", "\"\"Hamlet\" can not be found!\"", null)]
+        [NUnit.Framework.TestCaseAttribute("\"Moby Dick\"", "\"\"Moby Dick\" can not be found!\"", null)]
+        [NUnit.Framework.TestCaseAttribute("\"\"", "\"\"\" can not be found!\"", null)]
+        public virtual void SearchForOneBookThatIsNotInTheCatalog(string bookName, string errorMessage, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "mytag"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search for one book that is not in the catalog", null, @__tags);
+#line 18
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 19
+ testRunner.Given(string.Format("the book {0} is not in the catalog", bookName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 20
+ testRunner.When(string.Format("I search for {0}", bookName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 21
+ testRunner.Then(string.Format("the error message {0} is shown on the screen", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

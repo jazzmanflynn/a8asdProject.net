@@ -19,6 +19,7 @@ namespace TheProject.Model
 
         public Book Search(string bookTitle)
         {
+            SearchedBook = new Book(){Name = bookTitle};
             return catalog.GetBook(bookTitle);
         }
         public Library()
@@ -29,6 +30,7 @@ namespace TheProject.Model
         public bool IsMemberLoggedIn { get; set; }
         public MemberRegister MemberRegister { get; set; }
         public Member CurrentUser { get; set; }
+        public Book SearchedBook { get; set; }
 
         public void Login()
         {
