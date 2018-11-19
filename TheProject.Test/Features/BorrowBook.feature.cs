@@ -72,11 +72,9 @@ namespace TheProject.Test.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Borrow a book")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
         public virtual void BorrowABook()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Borrow a book", null, new string[] {
-                        "mytag"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Borrow a book", null, ((string[])(null)));
 #line 7
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -94,11 +92,9 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Borrow a not available book")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
         public virtual void BorrowANotAvailableBook()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Borrow a not available book", null, new string[] {
-                        "mytag"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Borrow a not available book", null, ((string[])(null)));
 #line 14
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();

@@ -1,10 +1,10 @@
 ﻿Feature: Login
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+	In order to use the library
+	As a member
+	I want to be able to login
 
 @mytag
 Scenario: Login
-	Given I am a member user and userPassword	
-	When I press login
-	Then  am logged in
+	Given Mikki is a member 
+	When they enter their username and password	
+	Then they are logged in
