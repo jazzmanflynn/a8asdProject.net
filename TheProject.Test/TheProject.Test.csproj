@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unit\DummyTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -71,7 +72,6 @@
   <ItemGroup>
     <Folder Include="Features\" />
     <Folder Include="Steps\" />
-    <Folder Include="Unit\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
