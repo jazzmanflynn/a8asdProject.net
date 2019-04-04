@@ -57,7 +57,7 @@ namespace TheProject.Test.Unit
         {
             Size++;
             Head = i;
-           // IsEmpty = false;
+            IsEmpty = false;
         }
     }
 }
