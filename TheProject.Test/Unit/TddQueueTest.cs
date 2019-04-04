@@ -47,8 +47,12 @@ namespace TheProject.Test.Unit
     {
         public int Size { get; private set; }
         public int Head { get; private set; }
-        public bool IsEmpty { get; private set; } = true;
+        public bool IsEmpty { get; private set; }
 
+        public TddQueue()
+        {
+            IsEmpty = true;
+        }
         public void Add(int i)
         {
             Size++;
