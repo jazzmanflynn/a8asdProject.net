@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using BoDi;
+using NUnit.Framework;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 

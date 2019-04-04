@@ -62,11 +62,7 @@
       <DependentUpon>BookRide.feature</DependentUpon>
     </Compile>
     <Compile Include="BookRideSteps.cs" />
-    <Compile Include="FindPassenger.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FindPassenger.feature</DependentUpon>
-    </Compile>
+    <Compile Include="Hooks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Unit\LuberControllerTest.cs" />
     <Compile Include="Unit\TddQueueTest.cs" />
@@ -76,10 +72,6 @@
     <None Include="BookRide.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>BookRide.feature.cs</LastGenOutput>
-    </None>
-    <None Include="FindPassenger.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>FindPassenger.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

@@ -69,76 +69,50 @@ namespace TheProject.Test
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 5
-#line hidden
-            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Name"});
-            table1.AddRow(new string[] {
-                        "Boris"});
-            table1.AddRow(new string[] {
-                        "George"});
-            table1.AddRow(new string[] {
-                        "John"});
-#line 6
-testRunner.Given("these drivers", ((string)(null)), table1, "Given ");
-#line hidden
-            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Name"});
-            table2.AddRow(new string[] {
-                        "Pat"});
-#line 11
-testRunner.Given("these passengers", ((string)(null)), table2, "Given ");
-#line hidden
-        }
-        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Pat books a ride with a driver")]
         public virtual void PatBooksARideWithADriver()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Pat books a ride with a driver", null, ((string[])(null)));
-#line 15
+#line 6
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 5
-this.FeatureBackground();
-#line 16
+#line 7
 testRunner.When("Pat books a ride with George", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 17
+#line 8
 testRunner.Then("George is booked by Pat", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Driver",
                         "Passenger",
                         "IsBooked"});
-            table3.AddRow(new string[] {
+            table1.AddRow(new string[] {
                         "George",
                         "Pat",
                         "true"});
-            table3.AddRow(new string[] {
+            table1.AddRow(new string[] {
                         "John",
                         "no booking",
                         "false"});
-#line 18
-testRunner.Then("these results are expected", ((string)(null)), table3, "Then ");
+#line 9
+testRunner.Then("these results are expected", ((string)(null)), table1, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Books a ride with the first available driver")]
+        [NUnit.Framework.CategoryAttribute("myTag")]
         public virtual void BooksARideWithTheFirstAvailableDriver()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Books a ride with the first available driver", null, ((string[])(null)));
-#line 23
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Books a ride with the first available driver", null, new string[] {
+                        "myTag"});
+#line 15
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 5
-this.FeatureBackground();
-#line 24
+#line 16
 testRunner.When("Pat books a ride", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 25
+#line 17
 testRunner.Then("Boris is booked by Pat", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
